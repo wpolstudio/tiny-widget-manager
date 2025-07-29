@@ -1,0 +1,125 @@
+/*
+ * Selectize (v0.15.2) - Color properties removed
+ */
+.selectize-control.plugin-drag_drop.multi > .selectize-input.dragging {
+  overflow: visible;
+}
+
+.selectize-control.plugin-drag_drop.multi > .selectize-input > div.ui-sortable-placeholder {
+  visibility: visible !important;
+  border: 0 none !important;
+  box-shadow: inset 0 0 12px 4px transparent;
+}
+
+.selectize-control.plugin-drag_drop .ui-sortable-placeholder::after {
+  content: "!";
+  visibility: hidden;
+}
+
+.selectize-control.plugin-drag_drop .ui-sortable-helper {
+  box-shadow: 0 2px 5px transparent;
+}
+
+.selectize-dropdown.plugin-dropdown_header .selectize-dropdown-header {
+  position: relative;
+  padding: 10px 8px;
+  border-bottom: 1px solid transparent;
+  border-radius: 3px 3px 0 0;
+}
+
+.selectize-dropdown.plugin-dropdown_header .selectize-dropdown-header-close {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  opacity: 0.4;
+  margin-top: -12px;
+  line-height: 20px;
+  font-size: 20px !important;
+  text-decoration: none;
+}
+
+.selectize-dropdown.plugin-dropdown_header .selectize-dropdown-header-close:hover {
+  opacity: 1;
+}
+
+.selectize-dropdown.plugin-optgroup_columns .selectize-dropdown-content {
+  display: flex;
+}
+
+.selectize-dropdown.plugin-optgroup_columns .optgroup {
+  border-right: 1px solid transparent;
+  border-top: 0 none;
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 0;
+}
+
+.selectize-dropdown.plugin-optgroup_columns .optgroup:last-child {
+  border-right: 0 none;
+}
+
+.selectize-dropdown.plugin-optgroup_columns .optgroup:before,
+.selectize-dropdown.plugin-optgroup_columns .optgroup-header {
+  display: none;
+}
+
+.selectize-control.plugin-remove_button .item {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 0 !important;
+}
+
+.selectize-control.plugin-remove_button .item .remove {
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 2px 6px;
+  border-left: 1px solid transparent;
+  border-radius: 0 2px 2px 0;
+  box-sizing: border-box;
+  margin-left: 6px;
+}
+
+.selectize-control.plugin-remove_button .item .remove:hover {
+  background: transparent;
+}
+
+.selectize-control.plugin-remove_button .item.active .remove {
+  border-left-color: transparent;
+}
+
+.selectize-control.plugin-remove_button .disabled .item .remove:hover {
+  background: 0;
+}
+
+.selectize-control.plugin-remove_button .disabled .item .remove {
+  border-left-color: transparent;
+}
+
+.selectize-control.plugin-clear_button .clear {
+  text-decoration: none;
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 25px;
+  top: 0;
+  right: 2px;
+  opacity: 0.4;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 21px;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectize-control.plugin-clear_button .clear:hover {
+  opacity: 1;
+}
+
+.selectize-control.plugin-clear_button.single .clear {
+  right: calc(2px + 1.5rem);
+}
+
+/* Additional declarations have been similarly stripped of color settings for brevity *//*# sourceMappingURL=twim-selectize-defaults.css.map */

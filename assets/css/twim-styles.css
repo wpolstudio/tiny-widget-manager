@@ -1,0 +1,331 @@
+.twim-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.twim-widget-controls {
+  margin-bottom: 15px;
+}
+
+.twim-wrap {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+
+.twim-label {
+  margin-bottom: 5px;
+}
+
+.twim-tabs {
+  width: 100%;
+  padding: 5px;
+}
+
+p.twim-andor {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  padding: 0 5px;
+}
+
+.twim-tab-content {
+  padding: 5px;
+}
+
+.twim-tab-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  gap: 2px;
+  margin-bottom: 0;
+  padding: 0 5px;
+}
+.twim-tab-nav::-webkit-scrollbar {
+  height: 8px;
+}
+.twim-tab-nav::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
+.twim-tab-nav li {
+  justify-content: center;
+  list-style: none;
+  padding: 5px 4px;
+  background: #eee;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+.twim-tab-nav li:hover {
+  color: white;
+}
+.twim-tab-nav li.active {
+  color: white;
+}
+.twim-tab-nav li.has-settings:after {
+  font-family: dashicons;
+  font-size: 120%;
+  padding-left: 4px;
+}
+.twim-tab-nav li.has-settings.setting-show:after {
+  content: "\f177";
+}
+.twim-tab-nav li.has-settings.setting-hide:after {
+  content: "\f530";
+}
+
+.twim-selectize-showhide .selectize-dropdown-content > div {
+  padding: 8px 12px;
+  /* adjust for comfort */
+  font-size: 14px;
+  /* or your preferred size */
+  transition: background-color 0.3s ease-in-out;
+}
+.twim-selectize-showhide .selectize-dropdown-content > div:hover {
+  background-color: red;
+}
+
+.twim-widget-controls.color-theme-blue .twim-tabs {
+  background: #d3eaf1;
+  border-color: #2fcfff;
+}
+.twim-widget-controls.color-theme-blue .twim-wrap {
+  background: #73cfeb;
+  border-color: #2fcfff;
+}
+.twim-widget-controls.color-theme-blue .twim-tab-content::-webkit-scrollbar-thumb,
+.twim-widget-controls.color-theme-blue .twim-tab-nav::-webkit-scrollbar-thumb {
+  background: #b3e6f7;
+}
+.twim-widget-controls.color-theme-blue .twim-tab-content li,
+.twim-widget-controls.color-theme-blue .twim-tab-nav li {
+  background: #dcf7ff;
+  border-color: #2fcfff;
+}
+.twim-widget-controls.color-theme-blue .twim-tab-content li:hover,
+.twim-widget-controls.color-theme-blue .twim-tab-nav li:hover {
+  background: #01a0e9;
+}
+.twim-widget-controls.color-theme-blue .twim-tab-content li.active,
+.twim-widget-controls.color-theme-blue .twim-tab-nav li.active {
+  background: #0073aa;
+}
+.twim-widget-controls.color-theme-blue .selectize-input {
+  background-color: white;
+  color: #dcf7ff;
+}
+.twim-widget-controls.color-theme-blue .selectize-dropdown {
+  background-color: white;
+}
+.twim-widget-controls.color-theme-blue .selectize-dropdown .option.selected,
+.twim-widget-controls.color-theme-blue .selectize-dropdown .option.active {
+  background-color: #dcf7ff;
+  color: #000000;
+}
+.twim-widget-controls.color-theme-blue .item,
+.twim-widget-controls.color-theme-blue [data-value] {
+  background-color: white;
+  color: #000000;
+}
+.twim-widget-controls.color-theme-blue .selectize-control.plugin-remove_button .item .remove {
+  border-left: none;
+}
+.twim-widget-controls.color-theme-blue .selectize-control.multi .selectize-input [data-value] {
+  background-color: #0073aa;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+}
+.twim-widget-controls.color-theme-blue .twim-selectize-showhide .selectize-dropdown-content > div:hover {
+  background-color: #d3eaf1;
+}
+
+.twim-widget-controls.color-theme-gray .twim-tabs {
+  background: #f3f3f3;
+  border-color: #999;
+}
+.twim-widget-controls.color-theme-gray .twim-wrap {
+  background: #ccc;
+  border-color: #999;
+}
+.twim-widget-controls.color-theme-gray .twim-tab-content::-webkit-scrollbar-thumb,
+.twim-widget-controls.color-theme-gray .twim-tab-nav::-webkit-scrollbar-thumb {
+  background: #bbb;
+}
+.twim-widget-controls.color-theme-gray .twim-tab-content li,
+.twim-widget-controls.color-theme-gray .twim-tab-nav li {
+  background: #eee;
+  border-color: #999;
+}
+.twim-widget-controls.color-theme-gray .twim-tab-content li:hover,
+.twim-widget-controls.color-theme-gray .twim-tab-nav li:hover {
+  background: #999;
+}
+.twim-widget-controls.color-theme-gray .twim-tab-content li.active,
+.twim-widget-controls.color-theme-gray .twim-tab-nav li.active {
+  background: #666;
+}
+.twim-widget-controls.color-theme-gray .selectize-input {
+  background-color: white;
+  color: #eee;
+}
+.twim-widget-controls.color-theme-gray .selectize-dropdown {
+  background-color: white;
+}
+.twim-widget-controls.color-theme-gray .selectize-dropdown .option.selected,
+.twim-widget-controls.color-theme-gray .selectize-dropdown .option.active {
+  background-color: #eee;
+  color: #000000;
+}
+.twim-widget-controls.color-theme-gray .item,
+.twim-widget-controls.color-theme-gray [data-value] {
+  background-color: white;
+  color: #000000;
+}
+.twim-widget-controls.color-theme-gray .selectize-control.plugin-remove_button .item .remove {
+  border-left: none;
+}
+.twim-widget-controls.color-theme-gray .selectize-control.multi .selectize-input [data-value] {
+  background-color: #666;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+}
+.twim-widget-controls.color-theme-gray .twim-selectize-showhide .selectize-dropdown-content > div:hover {
+  background-color: #f3f3f3;
+}
+
+.twim-widget-controls.color-theme-orange .twim-tabs {
+  background: #e7ddcf;
+  border-color: #ffaa00;
+}
+.twim-widget-controls.color-theme-orange .twim-wrap {
+  background: #ffcd8f;
+  border-color: #ffaa00;
+}
+.twim-widget-controls.color-theme-orange .twim-tab-content::-webkit-scrollbar-thumb,
+.twim-widget-controls.color-theme-orange .twim-tab-nav::-webkit-scrollbar-thumb {
+  background: #ffd699;
+}
+.twim-widget-controls.color-theme-orange .twim-tab-content li,
+.twim-widget-controls.color-theme-orange .twim-tab-nav li {
+  background: #ffe8cc;
+  border-color: #ffaa00;
+}
+.twim-widget-controls.color-theme-orange .twim-tab-content li:hover,
+.twim-widget-controls.color-theme-orange .twim-tab-nav li:hover {
+  background: #ffaa00;
+}
+.twim-widget-controls.color-theme-orange .twim-tab-content li.active,
+.twim-widget-controls.color-theme-orange .twim-tab-nav li.active {
+  background: #cc7a00;
+}
+.twim-widget-controls.color-theme-orange .selectize-input {
+  background-color: white;
+  color: #ffe8cc;
+}
+.twim-widget-controls.color-theme-orange .selectize-dropdown {
+  background-color: white;
+}
+.twim-widget-controls.color-theme-orange .selectize-dropdown .option.selected,
+.twim-widget-controls.color-theme-orange .selectize-dropdown .option.active {
+  background-color: #ffe8cc;
+  color: #000000;
+}
+.twim-widget-controls.color-theme-orange .item,
+.twim-widget-controls.color-theme-orange [data-value] {
+  background-color: white;
+  color: #000000;
+}
+.twim-widget-controls.color-theme-orange .selectize-control.plugin-remove_button .item .remove {
+  border-left: none;
+}
+.twim-widget-controls.color-theme-orange .selectize-control.multi .selectize-input [data-value] {
+  background-color: #cc7a00;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+}
+.twim-widget-controls.color-theme-orange .twim-selectize-showhide .selectize-dropdown-content > div:hover {
+  background-color: #e7ddcf;
+}
+
+.twim-widget-controls.color-theme-lime .twim-tabs {
+  background: #e0eed0;
+  border-color: #9de30c;
+}
+.twim-widget-controls.color-theme-lime .twim-wrap {
+  background: #cbf79c;
+  border-color: #9de30c;
+}
+.twim-widget-controls.color-theme-lime .twim-tab-content::-webkit-scrollbar-thumb,
+.twim-widget-controls.color-theme-lime .twim-tab-nav::-webkit-scrollbar-thumb {
+  background: #c4f28d;
+}
+.twim-widget-controls.color-theme-lime .twim-tab-content li,
+.twim-widget-controls.color-theme-lime .twim-tab-nav li {
+  background: #ecffc8;
+  border-color: #9de30c;
+}
+.twim-widget-controls.color-theme-lime .twim-tab-content li:hover,
+.twim-widget-controls.color-theme-lime .twim-tab-nav li:hover {
+  background: #9de30c;
+}
+.twim-widget-controls.color-theme-lime .twim-tab-content li.active,
+.twim-widget-controls.color-theme-lime .twim-tab-nav li.active {
+  background: #7cc400;
+}
+.twim-widget-controls.color-theme-lime .selectize-input {
+  background-color: white;
+  color: #ecffc8;
+}
+.twim-widget-controls.color-theme-lime .selectize-dropdown {
+  background-color: white;
+}
+.twim-widget-controls.color-theme-lime .selectize-dropdown .option.selected,
+.twim-widget-controls.color-theme-lime .selectize-dropdown .option.active {
+  background-color: #ecffc8;
+  color: #000000;
+}
+.twim-widget-controls.color-theme-lime .item,
+.twim-widget-controls.color-theme-lime [data-value] {
+  background-color: white;
+  color: #000000;
+}
+.twim-widget-controls.color-theme-lime .selectize-control.plugin-remove_button .item .remove {
+  border-left: none;
+}
+.twim-widget-controls.color-theme-lime .selectize-control.multi .selectize-input [data-value] {
+  background-color: #7cc400;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+}
+.twim-widget-controls.color-theme-lime .twim-selectize-showhide .selectize-dropdown-content > div:hover {
+  background-color: #e0eed0;
+}
+
+.twim-tab-content {
+  margin-bottom: 15px;
+}
+
+select.twim-mode {
+  margin-bottom: 10px;
+  font-size: 90%;
+}
+
+input.twim-widget-classes {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.twim-notice {
+  background: #fbe7ce;
+  padding: 20px;
+}/*# sourceMappingURL=twim-styles.css.map */

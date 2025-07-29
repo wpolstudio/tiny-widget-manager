@@ -1,0 +1,276 @@
+// =======================
+// Variables
+// =======================
+
+$themes: (blue: (widget-bg: #d3eaf1,
+        nav-bg: #73cfeb,
+        item-color: #000000,
+        border: #2fcfff,
+        item-bg: #dcf7ff,
+        hover-bg: #01a0e9,
+        active-bg: #0073aa,
+        scrollbar-thumb: #b3e6f7,
+    ),
+    gray: (widget-bg: #f3f3f3,
+        nav-bg: #ccc,
+        item-color: #000000,
+        border: #999,
+        item-bg: #eee,
+        hover-bg: #999,
+        active-bg: #666,
+        scrollbar-thumb: #bbb,
+    ),
+    orange: (widget-bg: #e7ddcf,
+        nav-bg: #ffcd8f,
+        item-color: #000000,
+        border: #ffaa00,
+        item-bg: #ffe8cc,
+        hover-bg: #ffaa00,
+        active-bg: #cc7a00,
+        scrollbar-thumb: #ffd699,
+    ),
+    lime: (widget-bg: #e0eed0,
+        nav-bg: #cbf79c,
+        item-color: #000000,
+        border: #9de30c,
+        item-bg: #ecffc8,
+        hover-bg: #9de30c,
+        active-bg: #7cc400,
+        scrollbar-thumb: #c4f28d,
+    ),
+);
+
+
+// =======================
+// Base styles
+// =======================
+
+.twim-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+}
+
+.twim-widget-controls {
+    margin-bottom: 15px;
+}
+
+.twim-wrap {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.twim-label {
+    margin-bottom: 5px;
+}
+
+.twim-tabs {
+    width: 100%;
+    padding: 5px;
+}
+
+p.twim-andor {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+    padding: 0 5px;
+}
+
+.twim-tab-content {
+    padding: 5px;
+}
+
+.twim-tab-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 0;
+    // width: 100%;
+    // border-top: 1px solid;
+    // border-bottom: 1px solid;
+    padding: 0 5px;
+
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+    }
+
+    li {
+        justify-content: center;
+        list-style: none;
+        padding: 5px 4px;
+        background: #eee;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        transition: all 0.3s ease-in-out;
+        // border-radius: 5px 5px 0 0;
+        // border-top: 1px solid gray;
+        // border-right: 1px solid gray;
+        // margin-right: 2px;
+
+        &:hover {
+            color: white;
+        }
+
+        &.active {
+            color: white;
+        }
+
+        &.has-settings:after {
+            font-family: dashicons;
+            font-size: 120%;
+            padding-left: 4px;
+        }
+
+        &.has-settings.setting-show:after {
+            content: "\f177";
+        }
+
+        &.has-settings.setting-hide:after {
+            content: "\f530";
+        }
+    }
+}
+
+.twim-selectize-showhide {
+    .selectize-dropdown-content>div {
+        padding: 8px 12px;
+        /* adjust for comfort */
+        font-size: 14px;
+        /* or your preferred size */
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: red;
+        }
+    }
+}
+
+
+
+// =======================
+// Theme styles
+// =======================
+
+@each $name,
+$colors in $themes {
+
+    .twim-widget-controls.color-theme-#{$name} {
+
+        .twim-tabs {
+            background: map-get($colors, widget-bg);
+            border-color: map-get($colors, border);
+        }
+
+        .twim-wrap {
+            background: map-get($colors, nav-bg);
+            border-color: map-get($colors, border);
+        }
+
+        .twim-tab-content,
+        .twim-tab-nav {
+            &::-webkit-scrollbar-thumb {
+                background: map-get($colors, scrollbar-thumb);
+            }
+
+            li {
+                background: map-get($colors, item-bg);
+                border-color: map-get($colors, border);
+
+                &:hover {
+                    background: map-get($colors, hover-bg);
+                }
+
+                &.active {
+                    background: map-get($colors, active-bg);
+                }
+            }
+        }
+
+        .selectize-input {
+            background-color: white;
+            // border-color: map-get($colors, item-bg);
+            color: map-get($colors, item-bg);
+
+            // &.dropdown-active {
+            //     border-color: darken(map-get($colors, item-bg), 10%);
+            // }
+        }
+
+        .selectize-dropdown {
+            // border-color: map-get($colors, item-bg);
+            // background-color: map-get($colors, item-bg);
+            background-color: white;
+
+            .option.selected,
+            .option.active {
+                background-color: map-get($colors, item-bg);
+                color: map-get($colors, item-color);
+            }
+        }
+
+        .item,
+        [data-value] {
+            // background-color: map-get($colors, item-bg);
+            background-color: white;
+            // border-color: darken(map-get($colors, item-bg), 10%);
+            color: map-get($colors, item-color);
+        }
+
+        .selectize-control.plugin-remove_button .item .remove {
+            border-left: none;
+        }
+
+        .selectize-control.multi .selectize-input [data-value] {
+            background-color: map-get($colors, active-bg);
+            // background-image: linear-gradient(to bottom, map-get($colors, item-bg), map-get($colors, active-bg));
+            background-image: none;
+            // background-repeat: repeat-x;
+            border: none;
+            text-shadow: none;
+        }
+
+        // Color style for show/hide select dropdown list
+        .twim-selectize-showhide {
+            .selectize-dropdown-content>div {
+                &:hover {
+                    background-color: map-get($colors, widget-bg);
+                }
+            }
+        }
+
+    }
+}
+
+// =======================
+// Other styles
+// =======================
+
+.twim-tab-content {
+    margin-bottom: 15px;
+}
+
+select.twim-mode {
+    margin-bottom: 10px;
+    font-size: 90%;
+}
+
+input.twim-widget-classes {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.twim-notice {
+    background: #fbe7ce;
+    padding: 20px;
+}
