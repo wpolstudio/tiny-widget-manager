@@ -8,6 +8,7 @@ Requires PHP: 7.4
 Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Plugin URI: https://github.com/wpolstudio/tiny-widget-manager
 
 **Tiny Widget Manager** enhances the WordPress widget system by letting you control the visibility of each widget based on various conditions.
 
@@ -66,6 +67,11 @@ Yes! A built-in input lets you apply your own classes—no third-party plugin ne
 
 = Will it slow down my site? =
 No. The plugin is lightweight and adds minimal overhead. Visibility logic is evaluated server-side only when necessary.
+
+== Development ==
+
+You can contribute to this plugin or follow development on GitHub:
+🔗 https://github.com/wpolstudio/tiny-widget-manager
 
 == Screenshots ==
 
