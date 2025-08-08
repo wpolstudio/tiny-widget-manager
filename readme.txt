@@ -72,6 +72,10 @@ Yes! A built-in input lets you apply your own classes—no third-party plugin ne
 = Will it slow down my site? =
 No. The plugin is lightweight and adds minimal overhead. Visibility logic is evaluated server-side only when necessary.
 
+== Development ==
+You can contribute to this plugin or follow development on GitHub:
+🔗 https://github.com/wpolstudio/tiny-widget-manager
+
 == Screenshots ==
 
 1. Condition selector showing pages (default blue color theme)
