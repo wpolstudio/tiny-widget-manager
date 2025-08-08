@@ -48,10 +48,6 @@ The settings page currently offers two options:
 TWIM does not currently support the new block-based widget editor introduced in recent WordPress versions.
 If you want to use TWIM, you must switch to the *legacy widget interface* (this can be done from the plugin’s settings).
 
-= Development =
-You can contribute to this plugin or follow development on GitHub:
-🔗 https://github.com/wpolstudio/tiny-widget-manager
-
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/tiny-widget-manager` directory, or install it via the WordPress plugin screen.
